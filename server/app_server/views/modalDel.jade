@@ -1,0 +1,20 @@
+// Modal
+div(id="modalDel", class="modal fade", role="dialog")
+  div.modal-dialog
+    div.modal-content
+      // Modal Header
+      div.modal-header
+        h4.modal-title Logs to delete
+        button(type="button", class="close", data-dismiss="modal")&times;
+      // Modal body
+      div.modal-body
+        div(id="cardInfo",class="")
+          div(class="card-body text-center")
+            p(class="card-text", id="delcard-text") Your are about to delete:
+            h1
+              span.badge.badge-light(hidden, id="logstoDel") 0 logs
+      // Modal footer
+      div.modal-footer
+        button(type="button", class="btn btn-danger", data-dismiss="modal", id="cancelDel") Cancel
+        button(hidden type="button", class="btn btn-primary", onclick='subDel()', id="confDel") Delete
+        button(hidden type="button", class="btn btn-primary", data-dismiss="modal", onclick='resetFilter()', id="closeDel") Close

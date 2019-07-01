@@ -1,0 +1,100 @@
+div(id="formbloc1", class="formbloc col-md-12")
+  div(class="form-group col-md-6" id="form-group1")
+      label(for="addScope")
+        span(class="badge badge-warning") Scope:
+      input(type="text" class="form-control" id="addScope", name="addScope")
+  button(hidden type= "button", onclick="unlockinput(this.id)", class="btn btn-warning", id="cmdAddScope", name="addDataItem") Edit
+  div(class="form-group col-md-6" id="form-group2")
+      label(for="addDomain")
+        span(class="badge badge-warning") Domain:
+      input(type="text" class="form-control" id="addDomain", name="addDomain")
+  button(hidden type= "button", onclick="unlockinput(this.id)", class="btn btn-warning", id="cmdAddDomain", name="addDataItem") Edit
+
+div(id="formbloc2", class="formbloc col-md-12")
+  div(class="form-group col-md-6" id="form-group3")
+    label(for="addEvent_code")
+      span(class="badge badge-warning") Event code:
+    input(type="text" class="form-control" id="addEvent_code", name="addEvent_code")
+  button(hidden type= "button", onclick="unlockinput()", class="btn btn-warning", id="cmdAddEvent_code", name="addDataItem") Edit
+  div(class="form-group col-md-6" id="form-group4")
+    label(for="addClasslog")
+      span(class="badge badge-warning") Class:
+    input(type="text" class="form-control" id="addClasslog", name="addClasslog")
+  button(hidden type= "button", onclick="unlockinput()", class="btn btn-warning", id="cmdAddClasslog", name="addDataItem") Edit
+
+
+div(id="formbloc3", class="formbloc col-md-12")
+  div(class="form-group col-md-12", id="addIdgroup", name="addIdgroup")
+    div(class="form-group", id="idfields")
+      div(class="form-group col-md-5")
+        label(for="inputIdType")
+          span(class="badge badge-warning") Id label:
+        input(type="text", class="form-control", id="addInputIdType", name="addInputIdType")
+      div(class="form-group col-md-5")
+        label(for="inputIdItem")
+          span(class="badge badge-warning") Id item:
+        input(type="text" class="form-control" id="addInputIdItem", name="addInputIdItem")
+      button(type= "button", onclick="addId()", class="btn btn-primary", id="addIdItem", name="addId()") Add
+
+div(id="formbloc4", class="formbloc col-md-12")
+  div(class="form-group col-md-12", id="form-group5")
+    label(for="addSource_file")
+      span(class="badge badge-warning") Source file:
+    input(type="text" class="form-control" id="addSource_file", name="addSource_file")
+  button(hidden type= "button", onclick="addId()", class="btn btn-warning", id="cmdAddSource_file", name="addId()") Edit
+  div(class="form-group col-md-12", id="addItemgroup", name="addItemgroup")
+    div(class="form-group", id="itemfields")
+      div(class="form-group col-md-5")
+        label(for="inputDataType")
+          span(class="badge badge-warning") Data label:
+        input(type="text", class="form-control", id="addInputDataType", name="addInputDataType")
+      div(class="form-group col-md-5")
+        label(for="addInputDataItem")
+          span(class="badge badge-warning") Data item:
+        input(type="text" class="form-control" id="addInputDataItem", name="addInputDataItem")
+      button(type= "button", onclick="addForm3()", class="btn btn-primary", id="addDataItem", name="addDataItem") Add
+
+div(id="formbloc5", class="formbloc col-md-12")
+
+  div(class="form-group col-md-6" id="form-group8")
+    label(for="addClient_host")
+      span(class="badge badge-warning") Client host:
+    input(type="text" class="form-control" id="addClient_host", name="addClient_host")
+  button(hidden type= "button", onclick="", class="btn btn-warning", id="cmdAddClient_host", name="addDataItem") Edit
+
+  div(class="form-group col-md-6" id="form-group9")
+    label(for="addHost")
+      span(class="badge badge-warning") Host:
+    input(type="text" class="form-control" id="addHost", name="addHost")
+  button(hidden type= "button", onclick="", class="btn btn-warning", id="cmdAddHost", name="addDataItem") Edit
+
+  div(class="form-group  col-md-6" id="form-group10")
+    label(for="addReceived_host")
+      span(class="badge badge-warning") Received host:
+    input(type="text" class="form-control" id="addReceived_host", name="addReceived_host")
+  button(hidden type= "button", onclick="", class="btn btn-warning", id="cmdAddReceived_host", name="addDataItem") Edit
+
+  div(class="form-group col-md-6" id="form-group11")
+    label(for="addReceived_ts")
+      span(class="badge badge-warning") Received ts:
+    input(type="date", class="form-control", name="addReceived_ts", id="addReceived_ts", value="01/01/2018 - 01/15/2018")
+  button(hidden type= "button", onclick="", class="btn btn-warning", id="cmdAddReceived_ts", name="addDataItem") Edit
+
+  div(class="form-group col-md-6" id="form-group12")
+    label(for="addReceived_from")
+      span(class="badge badge-warning") Received from:
+    input(type="text" class="form-control" id="addReceived_from", name="addReceived_from")
+  button(hidden type= "button", onclick="", class="btn btn-warning", id="cmdAddReceived_from", name="addDataItem") Edit
+
+  div(class="form-group col-md-6" id="form-group13")
+    label(for="addEvent_ts")
+      span(class="badge badge-warning") Event ts:
+    input(type="date", class="form-control", name="addEvent_ts", id="addEvent_ts", value="")
+  button(hidden type= "button", onclick="", class="btn btn-warning", id="cmdAddEvent_ts", name="addDataItem") Edit
+
+
+div(id="formbloc6", class="formbloc col-md-14")
+  div(class="form-group col-md-12" id="form-group8")
+    label(for="addMessage")
+      span(class="badge badge-warning") Message:
+    textarea(class="form-control", id="addMessage", rows="5", name="addMessage")

@@ -1,0 +1,15 @@
+// Nav
+nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.fixed-top
+  div.container
+    //Brand/logo
+    a.navbar-brand(href="#", id ='brand') AppLog
+    //Links
+    ul.navbar-nav
+      li.nav-item
+        a.nav-link(href="#",data-toggle="modal", data-target="#modalAdd" id="go2Modal1") add
+      li.nav-item
+        a.nav-link(href="#", id="navdelete") delete
+      li.nav-item
+        a.nav-link(href="#") update
+      li.nav-item
+        block button

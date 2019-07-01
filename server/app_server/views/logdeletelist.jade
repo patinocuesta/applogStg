@@ -1,0 +1,66 @@
+extends layout
+//- modalDel.jade
+//- modalAdd.jade
+//- modalEdit.jade
+block button
+  button.btn.btn-primary(type="button", data-toggle="modal", data-target="#myModal") Display edition delete
+block content
+  div.container
+    div.content
+      row
+        form(onsubmit="return false;" class="form-row")
+            div(class="form-group col-md-4")
+              label(for="del_received_ts")
+                span(class="badge badge-warning") Filter by received timestamp
+              input(type="text", class="form-control", name="del_received_ts", id="del_received_ts", value="01/01/2018 - 01/15/2018")
+            each field in fields
+              div(class="form-group col-md-4")
+                label(for='del_#{field}')
+                  span(class="badge badge-warning") Filter by #{field}
+                input(id='del_#{field}', class="form-control", type="text", name='del_#{field}', placeholder="#{field} ..." )
+      row
+        div(class="btn-group btn-block btn-group-sm")
+          button(type="button", class="btn btn-primary", id='selectItems', onclick='checkBoxAll(this.id)') Select all
+          button(type="button", class="btn btn-primary", onclick='resetFilter()') Reset
+          button(type="button", class="btn btn-primary",onclick='confirmeDel()', data-toggle="modal", data-target="#modalDel") Delete &nbsp
+            span.badge.badge-light#logsSelect 0 logs
+      row
+        table.table.table-striped(id="mainTab")
+          thead
+            tr(id='tabhead')
+              th select
+              th(hidden class='_id') id
+              th(hidden class='received_ts') received_ts
+              th(hidden class='domain') domain
+              th(hidden class='scope') scope
+              th(hidden class='received_host') received_host
+              th(hidden class='event_ts') event_ts
+              th(hidden class='client_host') client_host
+              th(hidden class='host') host
+              th(hidden class='received_from') received_from
+              th(hidden class='source_file') source_file
+              th(hidden class='event_code') event_code
+              th(hidden class='message') message
+              th(hidden class='class') class
+          tbody
+              each log in logs
+                tr(hidden class='logLine')
+                  td(class='del_cb')
+                    input(type="checkbox", name="delCheck", onchange ="checkSingle()")
+                  td(hidden class='id')=log._id
+                  td(hidden class='received_ts' name='received_ts')= log.received_ts
+                  td(hidden class='domain')=log.domain
+                  td(hidden class='scope')=log.scope
+                  td(hidden class='received_host')=log.received_host
+                  td(hidden class='event_ts' name='event_ts')=log.event_ts
+                  td(hidden class='client_host')=log.client_host
+                  td(hidden class='host')=log.host
+                  td(hidden class='received_from')=log.received_from
+                  td(hidden class='source_file')=log.source_file
+                  td(hidden class='event_code')=log.event_code
+                  td(hidden class='message')=log.message
+                  td(hidden class='class')=log.classlog
+  div.footer
+  include ./modalAdd.jade
+  include ./modalEdit.jade
+  include ./modalDel.jade

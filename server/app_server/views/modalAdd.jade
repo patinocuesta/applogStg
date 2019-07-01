@@ -1,0 +1,28 @@
+// Modal
+div(id="modalAdd", class="modal fade", role="dialog")
+  form(id="addform", action="/add", method="POST", role="form")
+    div.modal-dialog
+      div.modal-content
+        // Modal Header
+        div.modal-header
+          h4.modal-title Fill the form fields
+          button(type="button", class="close", data-dismiss="modal")&times;
+        // Modal body
+        div.modal-body
+          div(id="formAjax1")
+          div(id="formAjax2")
+          div(id="formAjax3")
+          div(id="formAjax4")
+          div(id="formAjax5")
+          div(id="formAjax6")
+        // Modal footer
+        div.modal-footer
+          button(type="button",id="cancelClo", class="btn btn-danger", data-dismiss="modal") Cancel
+          button(hidden type="button", id="cancelDel", class="btn btn-danger", data-dismiss="modal") Cancel
+          button(hidden type="button", id="go2Modal2", class="btn btn-primary") Next
+          button(hidden type="button", id="go2Modal3", class="btn btn-primary") Next
+          button(hidden type="button", id="go2Modal4", class="btn btn-primary") Next
+          button(hidden type="button", id="go2Modal5", class="btn btn-primary") Next
+          button(hidden type="button", id="go2Modal6", class="btn btn-primary") Next
+          button(hidden type="button", id="go2Modal7", class="btn btn-primary") Validate
+          button(hidden type="submit", id="go2Modal8", class="btn btn-primary") Save

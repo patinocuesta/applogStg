@@ -1,0 +1,131 @@
+// Modal
+div(id="myModal", class="modal fade", role="dialog")
+  div.modal-dialog
+    div.modal-content
+      // Modal Header
+      div.modal-header
+        h4.modal-title Select fields to display
+        button(type="button", class="close", data-dismiss="modal")&times;
+      // Modal body
+      div.modal-body
+        div.listform(id="cbcol")
+          h3
+            span(class="badge badge-primary") Columns to display
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option domain
+                  input(type="checkbox", value="", id="cbc_domain", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option scope
+                  input(type="checkbox", value="", id="cbc_scope", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option received_host
+                  input(type="checkbox", value="", id="cbc_received_host", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option event_ts
+                  input(type="checkbox", value="", id="cbc_event_ts", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option client_host
+                  input(type="checkbox", value="", id="cbc_client_host", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option host
+                  input(type="checkbox", value="", id="cbc_host", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option received_from
+                  input(type="checkbox", value="", id="cbc_received_from", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option source_file
+                  input(type="checkbox", value="", id="cbc_source_file", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option event_code
+                  input(type="checkbox", value="", id="cbc_event_code", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option message
+                  input(type="checkbox", value="", id="cbc_message", onchange="cbCol(this)")
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option class
+                  input(type="checkbox", value="", id="cbc_class", onchange="cbCol(this)")
+
+        div.listform(id="cbfor")
+          h3
+            span(class="badge badge-primary") Form fields to display
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option domain
+                  input(type="checkbox", value="", id="cbf_domain", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option scope
+                  input(type="checkbox", value="",id="cbf_scope", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option received_host
+                  input(type="checkbox", value="",id="cbf_received_host", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option event_ts
+                  input(type="checkbox", value="",id="cbf_event_ts", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option client_host
+                  input(type="checkbox", value="",id="cbf_client_host", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option host
+                  input(type="checkbox", value="",id="cbf_host", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option received_from
+                  input(type="checkbox", value="",id="cbf_received_from", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option source_file
+                  input(type="checkbox", value="",id="cbf_source_file", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option event_code
+                  input(type="checkbox", value="", id="cbf_event_code", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option message
+                  input(type="checkbox", value="", id="cbf_message", disabled)
+          h6
+            span(class="badge badge-light")
+              div.checkbox
+                label Option class
+                  input(type="checkbox", value="", id="cbf_class", disabled)
+      // Modal footer
+      div.modal-footer
+        button(type="button", class="btn btn-danger", data-dismiss="modal") Cancel
+        button(type="button", id="sendUrl", class="btn btn-primary") Send

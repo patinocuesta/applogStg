@@ -1,0 +1,52 @@
+extends layout
+//- modalAdd.jade
+//- modalEdit.jade
+block button
+  button.btn.btn-primary(type="button", data-toggle="modal", data-target="#myModal") Display edition
+block content
+  div.container
+    div.content
+      form(onsubmit="return false;" class="form-row")
+          div(class="form-group col-md-4")
+            label(for="input_received_ts")
+              span(class="badge badge-warning") Filter by received timestamp
+            input(type="text", class="form-control", name="input_received_ts", id="input_received_ts", value="")
+          each field in fields
+            div(class="form-group col-md-4")
+              label(for='input_#{field}')
+                span(class="badge badge-warning") Filter by #{field}
+              input(id='input_#{field}', class="form-control", type="text", name='find_#{field}', placeholder="#{field} ..." )
+      table.table.table-striped(id="mainTab")
+        thead
+            th(hidden class='id') id
+            th(hidden class='received_ts') received_ts
+            th(hidden class='domain') domain
+            th(hidden class='scope') scope
+            th(hidden class='received_host') received_host
+            th(hidden class='event_ts') event_ts
+            th(hidden class='client_host') client_host
+            th(hidden class='host') host
+            th(hidden class='received_from') received_from
+            th(hidden class='source_file') source_file
+            th(hidden class='event_code') event_code
+            th(hidden class='message') message
+            th(hidden class='class') class
+        tbody
+            each log in logs
+              tr(hidden)
+                td(hidden class='id')=log._id
+                td(hidden class='received_ts' name='received_ts')= log.received_ts
+                td(hidden class='domain')=log.domain
+                td(hidden class='scope')=log.scope
+                td(hidden class='received_host')=log.received_host
+                td(hidden class='event_ts' name='event_ts')=log.event_ts
+                td(hidden class='client_host')=log.client_host
+                td(hidden class='host')=log.host
+                td(hidden class='received_from')=log.received_from
+                td(hidden class='source_file')=log.source_file
+                td(hidden class='event_code')=log.event_code
+                td(hidden class='message')=log.message
+                td(hidden class='class')=log.classlog
+  div.footer
+  include ./modalAdd.jade
+  include ./modalEdit.jade
